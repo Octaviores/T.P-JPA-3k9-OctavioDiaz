@@ -3,6 +3,7 @@ package entidades;
 
 import java.io.Serializable;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 
@@ -13,6 +14,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Audited
 
 public class Domicilio implements Serializable {
     @Id

@@ -15,7 +15,7 @@ public class Main {
         try{
             em.getTransaction().begin();
 
-            Categoria lacteos = Categoria.builder().denominacion("lacteos").build();
+           /* Categoria lacteos = Categoria.builder().denominacion("lacteos").build();
             Categoria limpieza = Categoria.builder().denominacion("limpieza").build();
 
             Articulo articulo1 = Articulo.builder().precio(10).cantidad(20).denominacion("Yougurt LaSerenisima").build();
@@ -46,16 +46,17 @@ public class Main {
             factura1.getDetalle().add(det1);
             factura1.getDetalle().add(det2);
 
-            factura1.setTotal(7000);
+            factura1.setTotal(7000);*/
+
+
+Factura factura1 = em.find(Factura.class, 1L);
+// factura1.setNumero(85);
 
 
 
+            em.remove(factura1);
 
-
-
-            em.persist(factura1);
-
-            em.persist(cliente1);
+         /*   em.persist(cliente1);*/
 
             em.flush();
 
